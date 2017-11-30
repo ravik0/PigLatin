@@ -12,8 +12,9 @@ public void setup()
   joe = joa.toArray(joe); //sends the arraylist to joe, becomes array
   for (int i = 0; i < joe.length; i++) {
     System.out.print(pigLatin(joe[i]) + " "); //prints piglatin of the array, with spaces between words
-  } 
+  }
   //perfectly works, tho honestly probably overcomplicated
+  //could implement string.split(" ");
 }
 
 
@@ -33,10 +34,10 @@ public int findFirstVowel(String sWord)
 public String removeStuff(String str) {
     String sNew = new String();
     for(int i = 0; i < str.length(); i++) {
-      if (!str.substring(i,i+1).equals(",") && !str.substring(i, i+1).equals(" ") && !str.substring(i, i+1).equals("'") && !str.substring(i, i+1).equals("!")) {
+      if (!str.substring(i,i+1).equals(",") && !str.substring(i, i+1).equals(" ") && !str.substring(i, i+1).equals("'") && !str.substring(i, i+1).equals("!") && !str.substring(i,i+1).equals(".")) {
         sNew+=str.substring(i,i+1);
       }
-      //checks to see if the characetr at i is a comma, space, apostrophe, or exclamation point. If not, adds the character to the new string. If is, does nothing with character.
+      //checks to see if the character at i is a comma, space, apostrophe, or exclamation point. If not, adds the character to the new string. If is, does nothing with character.
     }
     return sNew;
     //stolen from my palindrome lol
